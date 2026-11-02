@@ -1,0 +1,23 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage*
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+
+# Local secrets and machine-specific settings
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# Generated parser output
+/web_scraping/books/result.csv
+
+# Old duplicate parser folder; active project is web_scraping/books
+/website_parser/
