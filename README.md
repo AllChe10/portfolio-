@@ -1,39 +1,15 @@
-# Учебное портфолио Python и QA
+# Портфолио Python и QA — ссылки на проекты
 
-Набор учебных проектов для практики Python, ООП и тестирования. Концепция заказов используется только для обучения; полноценный проект ателье ведётся отдельно.
+Этот репозиторий хранит исторический снимок старой объединённой структуры. Актуальные версии проектов вынесены в отдельные репозитории и развиваются там.
 
-## Проекты
+## Актуальные проекты
 
-- `python_learning/oop` — упражнения по ООП и модель заказа с клиентом, позициями, количеством, статусами и расчётом стоимости.
-- `api_testing` — HTTP-клиент и pytest-проверки API. Тесты с пометкой `integration` обращаются к работающему JSONPlaceholder.
-- `web_scraping/books` — учебный парсер каталога Books to Scrape и тесты парсинга и загрузки страниц.
+- [Python Order Manager](https://github.com/AllChe10/Python-learning/tree/main/order_manager) — учебное CLI-приложение с ООП, статусами заказов, JSON и тестами на pytest.
+- [API Testing](https://github.com/AllChe10/api-testing) — unit- и интеграционные тесты REST API, моки и GitHub Actions.
+- [Books to Scrape parser](https://github.com/AllChe10/website_parser) — парсер каталога книг на requests и Beautiful Soup с выгрузкой в CSV.
 
-## Установка
+## Примечание
 
-Из корневой папки репозитория в PowerShell:
+Код в папках этого репозитория — прежние копии проектов и может отставать от актуальных версий. Для просмотра и запуска используй ссылки выше.
 
-```powershell
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-```
-
-## Запуск тестов
-
-Команды выполняются из корневой папки после активации окружения:
-
-```powershell
-Set-Location .\api_testing
-python -m pytest -m "not integration"
-python -m pytest -m integration
-
-Set-Location ..\python_learning\oop
-python -m pytest -q
-
-Set-Location ..\..\web_scraping\books
-python -m pytest -q
-```
-
-Интеграционные API-тесты требуют подключения к интернету. Остальные перечисленные тесты используют локальные данные или моки.
-
-`result.csv` создаётся скриптом парсера и исключён из репозитория вместе с виртуальными окружениями и тестовым кэшем.
+Менеджер заказов — учебная практика. Полноценный проект для ателье ведётся отдельно.
